@@ -2,7 +2,7 @@
 const path = require('path');
 const express = require('express');
 // Rename routes folder to controllers to folloe MVC file structure
-const routes = require('./routes');
+const routes = require('./routes/api');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 // Need a helpers folder
