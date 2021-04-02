@@ -4,6 +4,7 @@ const Class = require('./class.js');
 const Member = require('./member.js');
 const Tier = require('./trainer.js');
 const Trainer = require('./trainer.js');
+const MemberClass = require('./memberClass.js');
 
 // Classes belong to a trainer
 
@@ -21,13 +22,13 @@ Trainer.hasMany(Class, {
 // Members have many classes
 
 Member.belongsToMany(Class, {
-    through: 'MemberClass'
+    through: MemberClass
 });
 
 // Classes have many members
 
 Class.belongsToMany(Member, {
-    through: 'MemberClass'
+    through: MemberClass
 });
 
 // Members have one tier
