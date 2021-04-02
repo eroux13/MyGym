@@ -4,7 +4,7 @@ const memberRoutes = require('./memberRoutes');
 const trainerRoutes = require('./trainerRoutes');
 const memberClassRoutes = require('./memberClassRoutes');
 const tierRoutes = require('./tierRoutes');
-const classRoutes = require('./classRoutes');
+const classRoutes = require('./trainerRoutes');
 
 
 router.use('/member', memberRoutes);
