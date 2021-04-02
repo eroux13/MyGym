@@ -1,4 +1,4 @@
-const { Tier } = require('../models');
+const Tier = require('../models/tier.js');
 
 const tierData = [
   {

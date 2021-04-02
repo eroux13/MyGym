@@ -1,4 +1,4 @@
-const { Member } = require('../models');
+const Member = require('../models/member.js');
 
 const memberData = [
   {

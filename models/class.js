@@ -21,7 +21,7 @@ Class.init(
       allowNull: false,
     },
     trainer_id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       references: {
         model: 'trainer',
         key: 'id'

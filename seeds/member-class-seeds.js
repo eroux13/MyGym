@@ -1,4 +1,4 @@
-const { MemberClass } = require('../models');
+const MemberClass = require('../models/memberClass.js');
 
 const memberClassData = [
   {

@@ -1,4 +1,4 @@
-const { Class } = require('../models');
+const Class = require('../models/class.js');
 
 const classData = [
   {

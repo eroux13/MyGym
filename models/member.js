@@ -25,7 +25,7 @@ Member.init(
         allowNull: false,
     },
     tier_id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       references: {
         model: 'tier',
         key: 'id'

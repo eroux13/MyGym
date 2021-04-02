@@ -1,4 +1,4 @@
-const { Trainer } = require('../models');
+const Trainer = require('../models/trainer.js');
 
 const trainerData = [
   {

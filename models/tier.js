@@ -3,11 +3,11 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-// Initialize Member model (table) by extending off Sequelize's Member class
-class Member extends Model {}
+// Initialize Tier model (table) by extending off Sequelize's Tier class
+class Tier extends Model {}
 
-// set up fields and rules for Member model
-Member.init(
+// set up fields and rules for Tier model
+Tier.init(
   {
     // define columns
     id: {
@@ -26,8 +26,8 @@ Member.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'member',
+    modelName: 'tier',
   }
 );
 
-module.exports = Member;
+module.exports = Tier;
