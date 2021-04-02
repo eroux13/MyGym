@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     // find one member by their `id` value
     try {
-        const memberData = await Category.findByPk(req.params.id, {
+        const memberData = await Member.findByPk(req.params.id, {
             //include: [{ model: Product }],
         });
 
