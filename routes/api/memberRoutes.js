@@ -1,5 +1,38 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { Member } = require('../models');
+
+router.get('/', async (req, res) => {
+    // find all members
+    try {
+        const memberData = await Member.findAll({
+            // include: [{ model: Product }],
+        });
+        res.status(200).json(memberData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+    // be sure to include its associated Products
+
+});
+
+router.get('/:id', async (req, res) => {
+    // find one member by their `id` value
+    try {
+        const memberData = await Category.findByPk(req.params.id, {
+            //include: [{ model: Product }],
+        });
+
+        if (!memberData) {
+            res.status(404).json({ message: 'No member found with that id!' });
+            return;
+        }
+
+        res.status(200).json(memberData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+    // be sure to include its associated Products
+});
 
 router.post('/login', async (req, res) => {
     try {
