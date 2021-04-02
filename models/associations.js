@@ -43,3 +43,12 @@ Tier.hasMany(Member, {
     foreignKey: 'tier_id',
     onDelete: 'CASCADE'
 })
+
+module.exports = {
+    Member,
+    Tier,
+    Class,
+    Trainer,
+    MemberClass
+  };
+  
