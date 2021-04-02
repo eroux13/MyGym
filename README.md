@@ -1,1 +1,1 @@
-# gym_management_database
+# Gym Management DB (rename later)
