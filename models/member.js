@@ -23,7 +23,7 @@ Member.init(
     last_name: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
+    },
     tier_id: {
       type: DataTypes.INTERGER,
       references: {
