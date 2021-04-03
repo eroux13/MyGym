@@ -2,7 +2,7 @@
 
 const Class = require('./class.js');
 const Member = require('./member.js');
-const Tier = require('./trainer.js');
+const Tier = require('./tier.js');
 const Trainer = require('./trainer.js');
 const MemberClass = require('./memberClass.js');
 
@@ -22,24 +22,28 @@ Trainer.hasMany(Class, {
 // Members have many classes
 
 Member.belongsToMany(Class, {
-    through: MemberClass
+    through: 'member_class',
+    hooks: true
 });
 
 // Classes have many members
 
 Class.belongsToMany(Member, {
-    through: MemberClass
+    through: 'member_class',
+    hooks: true
 });
-
-// Members have one tier
-
-Member.belongsTo(Tier, {
-    foreignKey: 'tier_id'
-})
 
 // Tiers have many members
 
 Tier.hasMany(Member, {
     foreignKey: 'tier_id',
-    onDelete: 'CASCADE'
 })
+
+// Members have one tier    
+
+Member.belongsTo(Tier, {
+    foreignKey: 'tier_id',
+    hooks: true
+})
+
+module.exports = { Class, Member, Tier, Trainer, MemberClass };

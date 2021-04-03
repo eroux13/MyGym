@@ -4,7 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Member model (table) by extending off Sequelize's Member class
-class Member extends Model {}
+class Member extends Model { }
 
 // set up fields and rules for Member model
 Member.init(
@@ -21,8 +21,8 @@ Member.init(
       allowNull: false,
     },
     last_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     tier_id: {
       type: DataTypes.INTEGER,

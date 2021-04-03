@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Trainer, Class } = require('../models');
+const { Trainer, Class } = require('../../models/associations.js');
 
 router.get('/', async (req, res) => {
     // find all trainers
@@ -65,7 +65,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
     // delete a trainer by their `id` value
     try {
         const trainerdata = await Trainer.destroy({
