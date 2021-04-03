@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { request } = require('express');
 const { Trainer, Class } = require('../../models/associations.js');
 
 router.get('/', async (req, res) => {
@@ -40,7 +41,11 @@ router.post('/', async (req, res) => {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
         });
-        res.status(200).json(trainerData);
+        const classData = await Class.create({
+            name: req.body.class_name,
+            trainer_id: trainerData.id
+        })
+        res.status(200).json(trainerData, classData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -59,8 +64,22 @@ router.put('/:id', async (req, res) => {
                 }
             }
         );
+        try {
+            console.log(req.params.id);
+            const classUpdateData = await Class.update({
+                name: req.body.class_name,
+            },
+                {
+                    where: {
+                        trainer_id: req.params.id
+                    }
+                }
+            );
+        }
+        catch (err) { console.log(err) };
         res.status(200).json(trainerUpdateData);
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
