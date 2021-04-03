@@ -4,7 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Trainer model (table) by extending off Sequelize's Model class
-class Trainer extends Model {}
+class Trainer extends Model { }
 
 // set up fields and rules for Trainer model
 Trainer.init(

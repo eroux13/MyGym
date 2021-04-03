@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class MemberClass extends Model {}
+class MemberClass extends Model { }
 
 MemberClass.init(
   {
@@ -15,10 +15,10 @@ MemberClass.init(
     },
     member_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'member',
-        key: 'id',
-      },
+      // references: {
+      //   model: 'member',
+      //   key: 'id',
+      // },
     },
     class_id: {
       type: DataTypes.INTEGER,
