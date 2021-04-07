@@ -4,7 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Tier model (table) by extending off Sequelize's Tier class
-class Tier extends Model {}
+class Tier extends Model { }
 
 // set up fields and rules for Tier model
 Tier.init(
