@@ -6,7 +6,7 @@ const routes = require('./routes/api');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 // Need a helpers folder
-const helpers = require('./utils');
+// const helpers = require('./utils');
 const sequelize = require('./config/connection');
 
 // Connection between session and sequelize for the use of cookies

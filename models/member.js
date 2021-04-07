@@ -30,7 +30,7 @@ Member.init(
         model: 'tier',
         key: 'id'
       }
-    }
+    }, 
   },
   {
     sequelize,
