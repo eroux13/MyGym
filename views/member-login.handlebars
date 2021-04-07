@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyGym</title>
+  <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body class="fluid-container"> 
+    <header class="row navbar navbar-light bg-light border">
+    <div class="col">
+        <div id="title" class="text-align-middle">
+        <img class="logo img-fluid" src="/public/assets/mygymlogo.png" alt="">
+        </div>
+    </div>
+    <div class="col d-flex justify-content-end">
+        <div class="top-buttons">
+        <button type="button" onclick="location.href='/'" id="blue-button" class="btn bg-info">Home</button>
+        </div>
+    </header>
+    <div class="row justify-content-center">
+
+
+    <div class="col-12">
+        <img src="">
+    </div>
+
+    <div id="form login-area" class="col-6 align-self-center mt-5 p-3">
+        <form class="form login-form">
+            <div class="form-group">
+                <label for="email-login">Email address</label>
+                <input name="email" type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div id="password-div" class="form-group">
+                <label for="member-password">Password</label>
+                <input name="password" type="password" class="form-control" id="password-login">
+            </div>
+            <button id="sign-in" type="submit" class="btn">Sign In</button>
+        </form>
+        </div>
+    </div>
+</body>
+
+<script src="/public/js/member-login.js"></script>
+
+</html>
