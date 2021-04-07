@@ -1,14 +1,15 @@
 const router = require('express').Router();
-const Member = require('../../models/member.js');
+const { Member, Tier } = require('../../models/associations.js');
 
 router.get('/', async (req, res) => {
     // find all members
     try {
         const memberData = await Member.findAll({
-            // include: [{ model: Product }],
+            include: [{ model: Tier }],
         });
         res.status(200).json(memberData);
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
     // be sure to include its associated Products
@@ -19,7 +20,7 @@ router.get('/:id', async (req, res) => {
     // find one member by their `id` value
     try {
         const memberData = await Member.findByPk(req.params.id, {
-            //include: [{ model: Product }],
+            include: [{ model: Tier }],
         });
 
         if (!memberData) {
@@ -38,7 +39,7 @@ router.put('/:id', async (req, res) => {
     // update a category by its `id` value
     try {
         const membershipData = await Member.update({
-            membership_type: req.body.membership_type,
+            tier_id: req.body.tier_id,
         },
             {
                 where: {
@@ -55,13 +56,12 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     // delete a category by its `id` value
     try {
-        const membershipData = await Member.destroy({
-            membership_type: req.body.membership_type,
-        },
+        const membershipData = await Member.destroy(
             {
-                where: {
-                    id: req.params.id
-                }
+                where:
+                {
+                    id: req.params.id,
+                },
             }
         );
         res.status(200).json(membershipData);
