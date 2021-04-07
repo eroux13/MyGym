@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyGym</title>
+  <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body class="fluid-container"> 
+    <header class="row navbar navbar-light bg-light border">
+    <div class="col">
+        <div id="title" class="text-align-middle">
+        <img class="logo img-fluid" src="/public/assets/mygymlogo.png" alt="">
+        </div>
+    </div>
+    <div class="col d-flex justify-content-end">
+        <div class="top-buttons">
+        <button type="button" onclick="location.href='/'" id="blue-button" class="btn bg-info">Home</button>
+        </div>
+    </header>
+    <div class="row justify-content-center">
+
+
+    <div class="col-12">
+        <img src="">
+    </div>
+
+    <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
+      <form class="form login-form">
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input name="first-name" id="first-name" type="text" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name"> Last Name</label>
+            <input name="last-name" id="last-name" type="text" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label for="email-signup">Email address</label>
+            <input name="email-signup" type="email" class="form-control" id="email-signup" aria-describedby="emailHelp"/>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="tier-signup">Please pick a membership tier:</label>
+                <select id="tier-signup" name="tier-signup">
+                <option value="silver">Silver ($25/month, 5 Classes per Month)</option>
+                <option value="gold">Gold ($50/month, 10 Classes per Month)</option>
+                <option value="platinum">Platinum ($100/month, Unlimited Access)</option>
+                </select>
+        </div>
+
+        <div class="form-group">
+            <label for="class-signup">Please pick your classes</label>
+                <select id="class-signup" name="class-signup" size="6" multiple>
+                <option value="yoga">Yoga (Tuesday and Thursday at 5pm)</option>
+                <option value="spin">Spin (Monday, Wednesday, and Friday at 7am)</option>
+                <option value="zumba">Zumba (Monday and Wednesday at 7pm)</option>
+                <option value="kickboxing">Kickboxing (Saturday and Sunday at 8am)</option>
+                <option value="abs">Abs (Everyday at 6am)</option>
+                <option value="lifting">Lifting (Everyday at 12pm)</option>
+                </select>
+        </div>
+        
+
+        <div id="password-div" class="form-group">
+            <label for="password-signup">Password</label>
+            <input name="password-signup" type="password-signup" class="form-control" id="password-signup"/>
+        </div>
+        <button id="sign-in" type="submit" class="btn">Sign Me Up!</button>
+    </form>
+    </div>
+    </div>
+</body>
+
+<script src="/public/js/signup.js"></script>
+
+</html>
