@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Member } = require('../models');
+const Member = require('../../models/member.js');
 
 router.get('/', async (req, res) => {
     // find all members
@@ -52,7 +52,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
     // delete a category by its `id` value
     try {
         const membershipData = await Member.destroy({

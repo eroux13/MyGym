@@ -50,5 +50,5 @@ module.exports = {
     Class,
     Trainer,
     MemberClass
-  };
+};
   
