@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Member, Tier } = require('../../models/associations.js');
 
+//Route: /api/class
 router.get('/', async (req, res) => {
     // find all members
     try {

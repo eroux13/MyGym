@@ -2,9 +2,15 @@
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
+const bcrypt = require('bcryptjs');
+
 
 // Initialize Member model (table) by extending off Sequelize's Member class
-class Member extends Model { }
+class Member extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 // set up fields and rules for Member model
 Member.init(
