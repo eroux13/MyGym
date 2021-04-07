@@ -6,7 +6,6 @@ const trainerRoutes = require('./trainerRoutes');
 // const tierRoutes = require('./tierRoutes');
 const classRoutes = require('./classRoutes');
 
-
 router.use('/member', memberRoutes);
 router.use('/trainer', trainerRoutes);
 // router.use('/memberClass', memberClassRoutes);
