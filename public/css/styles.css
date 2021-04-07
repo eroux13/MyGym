@@ -1,0 +1,61 @@
+body {
+  background-color: lightgrey;
+  background-size: cover no-repeat;
+  overflow-x: hidden;
+}
+
+#form-parent {
+  border-radius: 10px;
+  background-color: white;
+}
+
+#sign-in {
+  margin-top: 2rem;
+  background-color: rgb(90, 90, 255);
+  color: white;
+}
+
+#password-div {
+  margin-bottom: 0;
+}
+
+#signup-button {
+  background-color: rgb(90, 90, 255);
+  color: white;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 1242px) {
+  body {
+    background-size: 100%;
+  }
+}
+
+li {
+  color: #666;
+}
+
+a {
+  color: #666 !important;
+}
+
+a:hover {
+  color: blue !important;
+}
+
+
+.logo {
+  width: 160px;
+  margin: -30px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
