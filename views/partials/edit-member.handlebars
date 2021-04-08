@@ -1,0 +1,33 @@
+<!--Edit member info and links back to dashboard-->  
+
+
+<article>
+  <a href="/views/member-dashboard.handlebars"> &larr; Back to dashboard</a>
+  <h2>
+    Update My Info
+  </h2>
+  <form class="edit-member-form">
+    <div>
+      <label for="firstname">First Name</label>
+      <input name="firstname" type="text" value="{{user.firstname}}" />
+    </div>
+    <div>
+      <label for="lastname">Last Name</label>
+      <input name="lastname" type="text" value="{{user.lastname}}" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input name="email" value="{{user.email}}" />
+    </div>
+     <div>
+      <label for="password">Password</label>         
+      <input type="password" name="password" />
+    </div>
+    <div>
+      <input type="hidden" id="user-id" name="user-id" value={{user.id}} />
+    </div>   
+    <button type="submit">Update</button>
+  </form>
+</article>
+
+<script src="/javascript/edit-member.js"></script>

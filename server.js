@@ -2,11 +2,18 @@
 const session = require('express-session');
 const passport = require('passport');
 const initializePassport = require('./config/passport');
+const flash = require('express-flash');
+const Member = require('./models/member.js')
 
 initializePassport(
   passport,
-  email => users.find(user => user.email === email),
-  id => users.find(user => user.id === id)
+  email => {
+    return Member.findOne({ where: {email: email}})
+    // return users.find(user => user.email === email)
+  },
+  id => {
+    return Member.findOne({ where: {id: id}})
+  }
 )
 
 const path = require('path');
@@ -25,6 +32,7 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({});
 
+app.use(flash());
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
