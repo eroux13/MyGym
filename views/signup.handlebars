@@ -66,7 +66,7 @@
     -->
 
 
-  <!-- Carousel for header -->
+  <!-- Carousel for header
 
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -123,28 +123,32 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    </div>
+  </div>
+  -->
 
-      <!-- Start of form -->
 
-      <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
-        <form action="/signup" method="POST" class="form signup-area">
-          <div class="form-group">
-            <label for="firstname">First Name</label>
-            <input name="firstname" id="firstname" type="text" class="form-control" />
-          </div>
+  <!-- Start of form -->
 
-          <div class="form-group">
-            <label for="lastname"> Last Name</label>
-            <input name="lastname" id="lastname" type="text" class="form-control" />
-          </div>
+  <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
+    <form action="/signup" method="POST" class="form signup-area">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input name="firstname" id="firstname" type="text" class="form-control" />
+      </div>
 
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" />
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
+      <div class="form-group">
+        <label for="lastname"> Last Name</label>
+        <input name="lastname" id="lastname" type="text" class="form-control" />
+      </div>
 
-          <!-- 
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+      <!-- 
           <div class="form-group">
             <label for="tier-signup">Please pick a membership tier:</label>
                 <select id="tier-signup" name="tier-signup">
@@ -155,31 +159,31 @@
         </div>
         -->
 
-          <fieldset class="row mb-3">
-            <legend class="col-form-label col-sm-8 pt-0">Select your preferred membership tier:</legend>
-            <div class="col-sm-10 offset-sm-2" id="tier" name="tier">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="tier" id="tier" value="1">
-                <label class="form-check-label" for="tier" for="tier">
-                  Silver ($25/month, 5 Classes per Month)
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="tier" id="tier" value="2">
-                <label class="form-check-label" for="tier" for="tier">
-                  Gold ($50/month, 10 Classes per Month)
-                </label>
-              </div>
-              <div class="form-check disabled">
-                <input class="form-check-input" type="radio" name="tier" id="tier" value="3">
-                <label class="form-check-label" for="tier" for="tier">
-                  Platinum ($100/month, Unlimited Access) <strong>** Recommended **</strong>
-                </label>
-              </div>
-            </div>
-          </fieldset>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-8 pt-0">Select your preferred membership tier:</legend>
+        <div class="col-sm-10 offset-sm-2" id="tier" name="tier">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tier" id="tier" value="1">
+            <label class="form-check-label" for="tier" for="tier">
+              Silver ($25/month, 5 Classes per Month)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tier" id="tier" value="2">
+            <label class="form-check-label" for="tier" for="tier">
+              Gold ($50/month, 10 Classes per Month)
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input class="form-check-input" type="radio" name="tier" id="tier" value="3">
+            <label class="form-check-label" for="tier" for="tier">
+              Platinum ($100/month, Unlimited Access) <strong>** Recommended **</strong>
+            </label>
+          </div>
+        </div>
+      </fieldset>
 
-          <!--    
+      <!--    
         <div class="form-group">
           <label for="class-signup">Please pick your classes</label>
           <select id="class-signup" name="class-signup" size="6" multiple>
@@ -194,65 +198,64 @@
         -->
 
 
-          <div class="form-group">
-            <label for="class-signup">Select your preferred classes:</label>
-            <div class="row mb-3" id="class-signup" name="class-signup">
-              <div class="col-sm-10 offset-sm-2 ">
+      <div class="form-group">
+        <label for="class-signup">Select your preferred classes:</label>
+        <div class="row mb-3" id="class-signup" name="class-signup">
+          <div class="col-sm-10 offset-sm-2 ">
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Yoga (Tuesday and Thursday at 5pm)
-                  </label>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Yoga (Tuesday and Thursday at 5pm)
+              </label>
+            </div>
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Spin (Monday, Wednesday, and Friday at 7am)
-                  </label>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Spin (Monday, Wednesday, and Friday at 7am)
+              </label>
+            </div>
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Zumba (Monday and Wednesday at 7pm)
-                  </label>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Zumba (Monday and Wednesday at 7pm)
+              </label>
+            </div>
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Kickboxing (Saturday and Sunday at 8am)
-                  </label>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Kickboxing (Saturday and Sunday at 8am)
+              </label>
+            </div>
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Abs (Everyday at 6am)
-                  </label>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Abs (Everyday at 6am)
+              </label>
+            </div>
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Lifting (Everyday at 12pm)
-                  </label>
-                </div>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Lifting (Everyday at 12pm)
+              </label>
             </div>
           </div>
-
-
-          <div id="password-div" class="form-group">
-            <label for="password">Password</label>
-            <input name="password" type="password" class="form-control" id="password" />
-          </div>
-          <button id="sign-in" type="submit" class="btn">Sign Me Up!</button>
-        </form>
+        </div>
       </div>
-    </div>
+
+
+      <div id="password-div" class="form-group">
+        <label for="password">Password</label>
+        <input name="password" type="password" class="form-control" id="password" />
+      </div>
+      <button id="sign-in" type="submit" class="btn">Sign Me Up!</button>
+    </form>
+  </div>
 </body>
 
 
