@@ -29,14 +29,15 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="/public/css/styles.css" rel="stylesheet">
+    <link href="public/css/styles.css" rel="stylesheet">
   </head>
   <body>
     
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-    <img src="assets/mygymlogo.png" alt="" width="80" height="80" class="navbar-brand" href="#">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/strength.png" alt="" width="80" height="80" class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#">MyGym</a>  
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -57,7 +58,7 @@
     </div>
 
     <div id="form login-area" class="col-6 align-self-center mt-5 p-3">
-        <form class="form login-form">
+        <form action="/member-login" method="POST" class="form login-form">
             <div class="form-group">
                 <label for="email-login">Email address</label>
                 <input name="email" type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
@@ -78,7 +79,7 @@
     <p class="float-end"><a href="#">Back to top</a></p>
     <p>&copy; MyGym &middot; <a href="https://github.com/eroux13/gym_management_database" target="_blank">GitHub</a> &middot; <a>Created by: Maria Lara, Arthur Leung, Billy Montooth-Keating, & EJ Roux</a></p>
   </footer>
-  
+
 </main>
 
 

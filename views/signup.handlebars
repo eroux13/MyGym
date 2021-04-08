@@ -29,14 +29,15 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="/public/css/styles.css" rel="stylesheet">
+    <link href="public/css/styles.css" rel="stylesheet">
   </head>
   <body>
     
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-    <img src="assets/mygymlogo.png" alt="" width="80" height="80" class="navbar-brand" href="#">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/strength.png" alt="" width="80" height="80" class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#">MyGym</a>  
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -57,20 +58,20 @@
     </div>
 
     <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
-      <form class="form login-form">
+      <form action="/signup" method="POST" class="form login-form">
         <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input name="first-name" id="first-name" type="text" class="form-control"/>
+            <label for="firstname">First Name</label>
+            <input name="firstname" id="firstname" type="text" class="form-control"/>
         </div>
 
         <div class="form-group">
-            <label for="last-name"> Last Name</label>
-            <input name="last-name" id="last-name" type="text" class="form-control"/>
+            <label for="lastname"> Last Name</label>
+            <input name="lastname" id="lastname" type="text" class="form-control"/>
         </div>
 
         <div class="form-group">
-            <label for="email-signup">Email address</label>
-            <input name="email-signup" type="email" class="form-control" id="email-signup" aria-describedby="emailHelp"/>
+            <label for="email">Email address</label>
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"/>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
 
@@ -97,8 +98,8 @@
         
 
         <div id="password-div" class="form-group">
-            <label for="password-signup">Password</label>
-            <input name="password-signup" type="password-signup" class="form-control" id="password-signup"/>
+            <label for="password">Password</label>
+            <input name="password" type="password" class="form-control" id="password"/>
         </div>
         <button id="sign-in" type="submit" class="btn">Sign Me Up!</button>
     </form>

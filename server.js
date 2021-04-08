@@ -1,6 +1,14 @@
 // Imports
 const session = require('express-session');
-const passport = require('./config/passport');
+const passport = require('passport');
+const initializePassport = require('./config/passport');
+
+initializePassport(
+  passport,
+  email => users.find(user => user.email === email),
+  id => users.find(user => user.id === id)
+)
+
 const path = require('path');
 const express = require('express');
 // Rename routes folder to controllers to folloe MVC file structure
@@ -24,7 +32,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret: 'supersupersecret', resave: true, saveUninitialized: true }));
+
+app.use(session({ secret: 'supersupersecret', resave: false, saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
