@@ -30,7 +30,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="public/css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
 <body>
     
@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="col d-flex justify-content-end">
             <div class="top-buttons">
-                    {{#if loggedIn}}
+                    {{#if session.user}}
                 <a href="/member-dashboard">My Dashboard</a>
                 <button id="logout" class="btn-no-style">Logout</button>
                     {{else}}
