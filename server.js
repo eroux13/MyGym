@@ -8,11 +8,11 @@ const Member = require('./models/member.js')
 initializePassport(
   passport,
   email => {
-    return Member.findOne({ where: {email: email}})
+    return Member.findOne({ where: { email: email } })
     // return users.find(user => user.email === email)
   },
   id => {
-    return Member.findOne({ where: {id: id}})
+    return Member.findOne({ where: { id: id } })
   }
 )
 
