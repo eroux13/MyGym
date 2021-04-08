@@ -1,6 +1,21 @@
 // Imports
 const session = require('express-session');
-const passport = require('./config/passport');
+const passport = require('passport');
+const initializePassport = require('./config/passport');
+const flash = require('express-flash');
+const Member = require('./models/member.js')
+
+initializePassport(
+  passport,
+  email => {
+    return Member.findOne({ where: {email: email}})
+    // return users.find(user => user.email === email)
+  },
+  id => {
+    return Member.findOne({ where: {id: id}})
+  }
+)
+
 const path = require('path');
 const express = require('express');
 // Rename routes folder to controllers to folloe MVC file structure
@@ -17,6 +32,7 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({});
 
+app.use(flash());
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -24,8 +40,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret: 'supersupersecret', resave: true, saveUninitialized: true }));
-app.use(passport.intialize());
+
+app.use(session({ secret: 'supersupersecret', resave: false, saveUninitialized: false }));
+app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(routes);

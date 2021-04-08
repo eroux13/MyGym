@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { request } = require('express');
 const { Trainer, Class } = require('../../models/associations.js');
 
-//Route: /api/class
+//Route: /api/trainer
 router.get('/', async (req, res) => {
     // find all trainers
     try {
