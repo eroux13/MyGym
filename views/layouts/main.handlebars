@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="col d-flex justify-content-end">
             <div class="top-buttons">
-                    {{#if session.user}}
+                    {{#if loggedIn}}
                 <a href="/member-dashboard">My Dashboard</a>
                 <button id="logout" class="btn-no-style">Logout</button>
                     {{else}}
