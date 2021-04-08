@@ -52,3 +52,60 @@
             </div>
         </nav>
     </header>
+
+
+  <article>
+    <a href="/views/member-dashboard.handlebars"> &larr; Back to dashboard</a>
+    <h2>
+      Update My Classes
+    </h2>
+    <form class="edit-class-form">
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Classes</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="class-id" id="yoga" value="{{class.id.[0]}}" checked>
+              <label class="form-check-label" for="yoga">
+                Yoga
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="class-id" id="spin" value="{{class.id.[1]}}">
+              <label class="form-check-label" for="spin">
+                Spin
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="class-id" id="zumba" value="{{class.id.[2]}}" disabled>
+              <label class="form-check-label" for="zumba">
+                Zumba
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="class-id" id="kickboxing" value="{{class.id.[3]}}">
+              <label class="form-check-label" for="kickboxing">
+                Kickboxing
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="class-id" id="abs" value="{{class.id.[4]}}">
+              <label class="form-check-label" for="abs">
+                Abs
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="class-id" id="lifting" value="{{class.id.[5]}}">
+              <label class="form-check-label" for="lifting">
+                Lifting
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+<script src="/js/add-class.js"></script>
+<script src="/js/delete-class.js"></script>
+
+</body>
+
+</html>
