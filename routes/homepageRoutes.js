@@ -3,9 +3,10 @@ const passport = require('passport');
 const Member = require('../models/member.js');
 const isAuth = require('../config/middleware/isAuth');
 const isNotAuth = require('../config/middleware/isNotAuth');
+const isLoggedIn = require('../config/middleware/loggedIn')
 
 router.get('/', async (req, res) => {
-    res.render("homepage");
+    res.render("homepage", res.locals.login);
 });
 
 router.get('/member-login', isNotAuth, async (req, res) => {
@@ -17,7 +18,19 @@ router.get('/signup', isNotAuth, async (req, res) => {
 });
 
 router.get('/member-dashboard', isAuth, async (req, res) => {
-    res.render("member-dashboard");
+    try {
+        const unserializedUser = await Member.findByPk(req.session.passport.user);
+
+        const user = unserializedUser.get({ plain: true });
+    
+        res.render('member-dashboard', { 
+          user
+        });
+      } catch (err) {
+        res.status(500).json(err);
+        console.log(err)
+      }
+    //res.render("member-dashboard");
 });
 
 router.post('/member-login', passport.authenticate('local', {

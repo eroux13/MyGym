@@ -49,18 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="col d-flex justify-content-end">
             <div class="top-buttons">
-<<<<<<< HEAD
-                    {{#if loggedIn}}
-                <a href="/member-dashboard">My Dashboard</a>
-                <button id="logout" class="btn-no-style">Logout</button>
-                    {{else}}
-                <a href="/">Home</a>
-                <button type="button" onclick="location.href='/member-login'" id="login-button" class="btn">Login</button>
-                <button type="button" onclick="location.href='/signup'" id="signup-button" class="btn bg-info">Sign Up</button>
-                    {{/if}}
-            </div>
-=======
-              {{#if session.user}}
+              {{#if login}}
               <a href="/member-dashboard">My Dashboard</a>
               <button id="logout" class="btn-no-style">Logout</button>
               {{else}}
@@ -69,7 +58,6 @@
               <button type="button" onclick="location.href='/signup'" id="signup-button" class="btn bg-info">Sign
                 Up</button>
               {{/if}}
->>>>>>> 2922a8c1bf4ae1e4f0f2351dacafdd46a7e323df
             </div>
           </div>
         </div>
