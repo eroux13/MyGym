@@ -34,5 +34,6 @@ This application is covered under the MIT License.## Questions
 For questions, reach us via GitHub or by email.
 
 Github: [Artydabomb](https://github.com/Artydabomb), [maria-lara](https://github.com/maria-lara), [eroux13](https://github.com/eroux13), [Billy-MK](https://github.com/Billy-MK)
+
 Email: arthur.leung3@gmail.com, melara@ucdavis.edu, ej.roux13@gmail.com, wmontoothkeating@gmail.com
 
