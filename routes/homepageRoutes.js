@@ -2,12 +2,13 @@ const router = require('express').Router();
 const passport = require('passport');
 const Member = require('../models/member.js');
 const Tier = require('../models/tier.js');
+const Class = require('../models/class.js');
 const isAuth = require('../config/middleware/isAuth');
 const isNotAuth = require('../config/middleware/isNotAuth');
 const isLoggedIn = require('../config/middleware/loggedIn')
 
 router.get('/', async (req, res) => {
-    res.render("homepage", res.locals.login);
+    res.render("homepage");
 });
 
 router.get('/member-login', isNotAuth, async (req, res) => {
@@ -22,20 +23,20 @@ router.get('/member-dashboard', isAuth, async (req, res) => {
     try {
         const unserializedUser = await Member.findByPk(req.session.passport.user, {
             include: [{
-                model: Tier
+                model: Tier,
+                model: Class
             }]
         })
 
         const user = unserializedUser.get({ plain: true });
+        console.log(user);
     
         res.render('member-dashboard', { 
           user
         });
       } catch (err) {
         res.status(500).json(err);
-        console.log(err)
       }
-    //res.render("member-dashboard");
 });
 
 router.post('/member-login', passport.authenticate('local', {
