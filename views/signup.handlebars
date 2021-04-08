@@ -84,65 +84,67 @@
           <h1>Fitness Done Your Way</h1>
           <h5>Manage your profile, classes, membership, and trainers online.</h5>
 
-    <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
+          <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
 
-        <div class="form-group">
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input name="firstname" id="firstname" type="text" class="form-control" />
+
+            </div>
+
+          </div>
+          <div class="carousel-item">
+            <img src="assets/trainer.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>World Class Trainers</h1>
+              <h5>Our certified personal trainers are fun, motivating, and empatheic.</h5>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/fitness-class.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Classes Made for You</h1>
+              <h5>We have a wide variety of classes offered to accomodate your schedule and needs.</h5>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Start of form -->
+
+      <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
+        <form action="/signup" method="POST" class="form signup-area">
+          <div class="form-group">
             <label for="firstname">First Name</label>
-            <input name="firstname" id="firstname" type="text" class="form-control"/>
+            <input name="firstname" id="firstname" type="text" class="form-control" />
+          </div>
 
-        </div>
+          <div class="form-group">
+            <label for="lastname"> Last Name</label>
+            <input name="lastname" id="lastname" type="text" class="form-control" />
+          </div>
 
-      </div>
-      <div class="carousel-item">
-        <img src="assets/trainer.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h1>World Class Trainers</h1>
-          <h5>Our certified personal trainers are fun, motivating, and empatheic.</h5>
-        </div>
-      </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
 
-      <div class="carousel-item">
-        <img src="assets/fitness-class.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h1>Classes Made for You</h1>
-          <h5>We have a wide variety of classes offered to accomodate your schedule and needs.</h5>
-        </div>
-
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <!-- Start of form -->
-
-  <div id="form signup-area" class="col-6 align-self-center mt-5 p-3">
-    <form action="/signup" method="POST" class="form login-form">
-      <div class="form-group">
-        <label for="firstname">First Name</label>
-        <input name="firstname" id="firstname" type="text" class="form-control" />
-      </div>
-
-      <div class="form-group">
-        <label for="lastname"> Last Name</label>
-        <input name="lastname" id="lastname" type="text" class="form-control" />
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" />
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-
-      <!-- 
+          <!-- 
           <div class="form-group">
             <label for="tier-signup">Please pick a membership tier:</label>
                 <select id="tier-signup" name="tier-signup">
@@ -153,31 +155,31 @@
         </div>
         -->
 
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-sm-8 pt-0">Select your preferred membership tier:</legend>
-        <div class="col-sm-10 offset-sm-2" id="tier-signup" name="tier-signup">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-            <label class="form-check-label" for="gridRadios1" for="tier-signup">
-              Silver ($25/month, 5 Classes per Month)
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-            <label class="form-check-label" for="gridRadios2" for="tier-signup">
-              Gold ($50/month, 10 Classes per Month)
-            </label>
-          </div>
-          <div class="form-check disabled">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-            <label class="form-check-label" for="gridRadios3" for="tier-signup">
-              Platinum ($100/month, Unlimited Access) <strong>** Recommended **</strong>
-            </label>
-          </div>
-        </div>
-      </fieldset>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-8 pt-0">Select your preferred membership tier:</legend>
+            <div class="col-sm-10 offset-sm-2" id="tier" name="tier">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tier" id="tier" value="1">
+                <label class="form-check-label" for="tier" for="tier">
+                  Silver ($25/month, 5 Classes per Month)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tier" id="tier" value="2">
+                <label class="form-check-label" for="tier" for="tier">
+                  Gold ($50/month, 10 Classes per Month)
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="tier" id="tier" value="3">
+                <label class="form-check-label" for="tier" for="tier">
+                  Platinum ($100/month, Unlimited Access) <strong>** Recommended **</strong>
+                </label>
+              </div>
+            </div>
+          </fieldset>
 
-      <!--    
+          <!--    
         <div class="form-group">
           <label for="class-signup">Please pick your classes</label>
           <select id="class-signup" name="class-signup" size="6" multiple>
@@ -192,65 +194,65 @@
         -->
 
 
-      <div class="form-group">
-        <label for="class-signup">Select your preferred classes:</label>
-        <div class="row mb-3" id="class-signup" name="class-signup">
-          <div class="col-sm-10 offset-sm-2 ">
+          <div class="form-group">
+            <label for="class-signup">Select your preferred classes:</label>
+            <div class="row mb-3" id="class-signup" name="class-signup">
+              <div class="col-sm-10 offset-sm-2 ">
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Yoga (Tuesday and Thursday at 5pm)
-              </label>
-            </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Yoga (Tuesday and Thursday at 5pm)
+                  </label>
+                </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Spin (Monday, Wednesday, and Friday at 7am)
-              </label>
-            </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Spin (Monday, Wednesday, and Friday at 7am)
+                  </label>
+                </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Zumba (Monday and Wednesday at 7pm)
-              </label>
-            </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Zumba (Monday and Wednesday at 7pm)
+                  </label>
+                </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Kickboxing (Saturday and Sunday at 8am)
-              </label>
-            </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Kickboxing (Saturday and Sunday at 8am)
+                  </label>
+                </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Abs (Everyday at 6am)
-              </label>
-            </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Abs (Everyday at 6am)
+                  </label>
+                </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Lifting (Everyday at 12pm)
-              </label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Lifting (Everyday at 12pm)
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
 
-      <div id="password-div" class="form-group">
-        <label for="password">Password</label>
-        <input name="password" type="password" class="form-control" id="password" />
+          <div id="password-div" class="form-group">
+            <label for="password">Password</label>
+            <input name="password" type="password" class="form-control" id="password" />
+          </div>
+          <button id="sign-in" type="submit" class="btn">Sign Me Up!</button>
+        </form>
       </div>
-      <button id="sign-in" type="submit" class="btn">Sign Me Up!</button>
-    </form>
-  </div>
-  </div>
+    </div>
 </body>
 
 
