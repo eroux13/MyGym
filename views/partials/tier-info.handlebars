@@ -1,0 +1,67 @@
+   <article class="post">
+      <div class = "content">
+        <p>Your Current Membership Tier: {{tier.tier_name}}</p>
+        <p>Your Email: {{member.email}}</p>
+        <a href="/views/partials/edit-tier.handlebars">Change My Membership</a>
+      </div>
+
+
+  <div class="container py-3" id="pricing-tiers">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Our Tiers</h1>
+      <p class="fs-5 text-muted">Membership tiers are designed to accomodate your budget, availability, and fitness goals. You can upgrade or downgrade tiers at any time, for no addition fee.</p>
+    </div>
+
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Silver</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$25<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Enroll in any class</li>
+                <li>5 classes per month</li>
+                <li>Access to all facilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Gold</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$50<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Enroll in any class</li>
+                <li>10 classes per month</li>
+                <li>One individual personal training session</li>
+                <li>Access to all facilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-white bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Platinum</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$75<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Enroll in any class</li>
+                <li>Unlimited classes per month</li>
+                <li>Five individual personal training sessions</li>
+                <li>Early access to all facilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</article>
