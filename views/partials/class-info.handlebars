@@ -56,8 +56,10 @@
     <!--Current classes-->
 
       <div class = "content">
-        <p>Your Current Classes: 
-
+        <p>Your Current Classes:
+          {{#each user.classes}}
+            <p>{{this.name}}</p>
+          {{/each}}
         </p>
         <a href="/views/partials/edit-class.handlebars">Change My Classes</a>
       </div>
