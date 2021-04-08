@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const passport = require('passport');
 const Member = require('../models/member.js');
+const Tier = require('../models/tier.js');
 const isAuth = require('../config/middleware/isAuth');
 const isNotAuth = require('../config/middleware/isNotAuth');
 const isLoggedIn = require('../config/middleware/loggedIn')
@@ -19,7 +20,11 @@ router.get('/signup', isNotAuth, async (req, res) => {
 
 router.get('/member-dashboard', isAuth, async (req, res) => {
     try {
-        const unserializedUser = await Member.findByPk(req.session.passport.user);
+        const unserializedUser = await Member.findByPk(req.session.passport.user, {
+            include: [{
+                model: Tier
+            }]
+        })
 
         const user = unserializedUser.get({ plain: true });
     
