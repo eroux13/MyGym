@@ -1,7 +1,7 @@
 const { Model } = require("sequelize");
 module.exports = function (req, res, next) {
     if (req.user) {
-        return next();
+        return res.redirect('/member-dashboard')
     }
-    return res.redirect("/member-login");
+    return next();
 }
