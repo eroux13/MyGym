@@ -19,8 +19,9 @@ router.get('/member-dashboard', async (req, res) => {
 });
 
 router.post('/member-login', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/member-login'
+    successRedirect: '/member-dashboard',
+    failureRedirect: '/member-login',
+    failureFlash: true
 }))
 
 router.post('/signup', async (req, res) => {
