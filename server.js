@@ -3,7 +3,8 @@ const session = require('express-session');
 const passport = require('passport');
 const initializePassport = require('./config/passport');
 const flash = require('express-flash');
-const Member = require('./models/member.js')
+const Member = require('./models/member.js');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 initializePassport(
   passport,
