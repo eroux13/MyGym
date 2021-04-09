@@ -190,4 +190,13 @@ body {
   margin-left: 16%;
   margin-bottom: 20px !important;
 }
+
+.tier-info {
+  margin-left: 16%;
+  margin-top: 60px;
+}
+.tierBtn {
+  margin-left: 16%;
+  background-color: skyblue;
+}
 /* Dashboard Styling End*/

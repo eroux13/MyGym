@@ -34,9 +34,6 @@
   <link href="./../../public/css/styles.css" rel="stylesheet">
 </head>
 
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
-
 <body>
 
   <header>
@@ -61,36 +58,49 @@
   </header>
 
 
-  <article>
+  <article class="tier-info">
     <a href="/views/member-dashboard.handlebars"> &larr; Back to dashboard</a>
     <h2>
       Update My Membership
     </h2>
-    <form class="edit-tier-form" action="/api/member/{{user.id}}" method="POST">
-        <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">Tiers</legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="newTier" id="silver" value="1" checked>
-              <label class="form-check-label" for="silver">
-                Silver
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="newTier" id="gold" value="2">
-              <label class="form-check-label" for="gold">
-                Gold
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="newTier" id="platinum" value="3">
-              <label class="form-check-label" for="platinum">
-                Platinum
-              </label>
-            </div>
+    <form class="edit-tier-form">
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Tiers</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tier-id" id="silver" value="{{tier.id.[0]}}" checked>
+            <label class="form-check-label" for="silver">
+              Silver
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tier-id" id="gold" value="{{tier.id.[1]}}">
+            <label class="form-check-label" for="gold">
+              Gold
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tier-id" id="platinum" value="{{tier.id.[2]}}">
+            <label class="form-check-label" for="platinum">
+              Platinum
+            </label>
+          </div>
+        </div>
+        {{!-- <div class="form-check">
+          <input class="form-check-input" type="radio" name="tier-id" id="gold" value="{{tier.id.[1]}}">
+          <label class="form-check-label" for="gold">
+            Gold
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tier-id" id="platinum" value="{{tier.id.[2]}}" disabled>
+          <label class="form-check-label" for="platinum">
+            Platinum
+          </label>
+        </div> --}}
         </div>
       </fieldset>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary tierBtn">Submit</button>
 
       <script src="/js/edit-tier.js"></script>
 
