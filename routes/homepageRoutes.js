@@ -21,7 +21,24 @@ router.get('/signup', isNotAuth, async (req, res) => {
 });
 
 router.get('/edit-tier', isAuth, async (req,res) => {
-    res.render("edit-tier");
+    try {
+        const unserializedUser = await Member.findByPk(req.session.passport.user, {
+            include: [{
+                model: Tier
+            },
+            {
+                model: Class
+            }]
+        })
+
+        const user = unserializedUser.get({ plain: true });
+    
+        res.render('edit-tier', { 
+          user
+        });
+      } catch (err) {
+        res.status(500).json(err);
+      }
 })
 
 router.get('/member-dashboard', isAuth, async (req, res) => {
@@ -36,7 +53,6 @@ router.get('/member-dashboard', isAuth, async (req, res) => {
         })
 
         const user = unserializedUser.get({ plain: true });
-        console.log(user);
     
         res.render('member-dashboard', { 
           user
