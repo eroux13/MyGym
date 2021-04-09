@@ -59,17 +59,19 @@
 
   <!--Current classes-->
 
-  <div class="content">
-    <p>Your Current Classes:
+  <div class="content class-info">
+    <h3>Class Enrollment:</h3>
+    <h5>Your Current Classes:</h5>
+    <ul>
       {{#each user.classes}}
-    <p>{{this.name}}</p>
-    {{/each}}
-    </p>
-    <a href="/views/partials/edit-class.handlebars">Change My Classes</a>
+      <li>{{this.name}}</li>
+      {{/each}}
+    </ul>
+    {{!-- <a href="/views/partials/edit-class.handlebars">Change My Classes</a> --}}
   </div>
 
   <!--Display available classes-->
-  <div class="container py-5" id="featured-3">
+  <div class="container py-5 classes" id="featured-3">
     <h2 class="pb-2 border-bottom">Classes Available</h2>
     <div class="row g-5 py-5">
       <div class="feature col-md-4">

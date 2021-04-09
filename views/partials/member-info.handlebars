@@ -58,10 +58,11 @@
   </header>
   <!--View member info (name, email) & links to edit user info page-->
 
-  <article class="post">
+  <article class="post member-info">
     <div class="content">
-      <p>Your Name: {{user.first_name}} {{user.last_name}}</p>
-      <p>Your Email: {{user.email}}</p>
-      <a href="/views/partials/edit-member.handlebars">Edit My Info</a>
+      <h3>Member Info:</h3>
+      <p><strong>Your Name: </strong>{{user.first_name}} {{user.last_name}}</p>
+      <p><strong>Email: </strong>{{user.email}}</p>
+      {{!-- <a href="/views/partials/edit-member.handlebars">Edit My Info</a> --}}
     </div>
   </article>
