@@ -18,7 +18,7 @@ async function editFormHandler(event) {
       });
 
     if (response.ok) {
-        document.location.replace('/partials/tier-info');
+        document.location.replace('/edit-tier');
         } else {
         alert(response.statusText);
         }

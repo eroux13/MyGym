@@ -20,6 +20,10 @@ router.get('/signup', isNotAuth, async (req, res) => {
     res.render('signup');
 });
 
+router.get('/edit-tier', isAuth, async (req,res) => {
+    res.render("edit-tier");
+})
+
 router.get('/member-dashboard', isAuth, async (req, res) => {
     try {
         const unserializedUser = await Member.findByPk(req.session.passport.user, {
