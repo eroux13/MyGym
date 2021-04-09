@@ -63,8 +63,8 @@ router.get('/member-dashboard', isAuth, async (req, res) => {
 });
 
 router.post('/member-login', passport.authenticate('local'), (req, res) => {
+    console.log('passport authenticated');
     req.session.save(() => {
-        req.session.user_id = userData.id;
         req.session.logged_in = true;
 
         res.redirect('/member-dashboard');
