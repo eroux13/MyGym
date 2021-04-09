@@ -3,7 +3,8 @@ const session = require('express-session');
 const passport = require('passport');
 const initializePassport = require('./config/passport');
 const flash = require('express-flash');
-const Member = require('./models/member.js')
+const Member = require('./models/member.js');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 initializePassport(
   passport,
@@ -41,7 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use(session({ secret: 'supersupersecret', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'supersupersecret', cookie: {}, resave: false, saveUninitialized: true, store: new SequelizeStore({ db: sequelize}) }));
 app.use(passport.initialize());
 app.use(passport.session());
 
