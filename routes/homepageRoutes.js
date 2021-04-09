@@ -62,11 +62,14 @@ router.get('/member-dashboard', isAuth, async (req, res) => {
       }
 });
 
-router.post('/member-login', passport.authenticate(req, res, 'local', {
-    successRedirect: '/member-dashboard',
-    failureRedirect: '/member-login',
-    failureFlash: true
-}))
+router.post('/member-login', passport.authenticate('local'), (req, res) => {
+    req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
+
+        res.redirect('/member-dashboard');
+    });
+})
 
 router.post('/signup', async (req, res) => {
     try {
