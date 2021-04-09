@@ -41,7 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use(session({ secret: 'supersupersecret', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'supersupersecret', cookie: {}, resave: false, saveUninitialized: true, store: new SequelizeStore({ db: sequelize}) }));
 app.use(passport.initialize());
 app.use(passport.session());
 
