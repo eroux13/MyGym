@@ -34,6 +34,13 @@
   <link href="./../../public/css/styles.css" rel="stylesheet">
 </head>
 
+<<<<<<< HEAD:views/partials/edit-tier.handlebars
+=======
+    
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+>>>>>>> 718e29caf9249e30fd47a5fbcf970500401b4624:views/edit-tier.handlebars
 <body>
 
   <header>
@@ -64,6 +71,7 @@
       Update My Membership
     </h2>
     <form class="edit-tier-form">
+<<<<<<< HEAD:views/partials/edit-tier.handlebars
       <fieldset class="row mb-3">
         <legend class="col-form-label col-sm-2 pt-0">Tiers</legend>
         <div class="col-sm-10">
@@ -72,6 +80,29 @@
             <label class="form-check-label" for="silver">
               Silver
             </label>
+=======
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Tiers</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tier-id" id="silver" value="{{tier.id.[0]}}" checked>
+              <label class="form-check-label" for="silver">
+                Silver
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tier-id" id="gold" value="{{tier.id.[1]}}">
+              <label class="form-check-label" for="gold">
+                Gold
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tier-id" id="platinum" value="{{tier.id.[2]}}">
+              <label class="form-check-label" for="platinum">
+                Platinum
+              </label>
+            </div>
+>>>>>>> 718e29caf9249e30fd47a5fbcf970500401b4624:views/edit-tier.handlebars
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="tier-id" id="gold" value="{{tier.id.[1]}}">
