@@ -62,7 +62,7 @@ router.get('/member-dashboard', isAuth, async (req, res) => {
       }
 });
 
-router.post('/member-login', passport.authenticate('local', {
+router.post('/member-login', passport.authenticate(req, res, 'local', {
     successRedirect: '/member-dashboard',
     failureRedirect: '/member-login',
     failureFlash: true

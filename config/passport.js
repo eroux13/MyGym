@@ -3,7 +3,7 @@ const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcrypt')
 
 function initialize(passport, getUserByEmail, getUserById) {
-    const authenticateUser = async (email, password, done) => {
+    const authenticateUser = async (req, res, email, password, done) => {
         const user = await getUserByEmail(email)
 
         // If no user matches the email
@@ -14,6 +14,10 @@ function initialize(passport, getUserByEmail, getUserById) {
         // Otherwise, checks password against user's password in the database. If it matches, returns the user
         try {
             if (await bcrypt.compare(password, user.password)) {
+                req.session.save(() => {
+                    req.session.user_id = userData.id;
+                    req.session.logged_in = true;
+                });
                 return done(null, user)
             } else {
                 return done(null, false, { message: 'Incorrect password' })
