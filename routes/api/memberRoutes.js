@@ -36,11 +36,13 @@ router.get('/:id', async (req, res) => {
     // be sure to include its associated Products
 });
 
-router.put('/:id', async (req, res) => {
+router.post('/:id', async (req, res) => {
     // update a category by its `id` value
     try {
+        console.log("tier id: " + req.body.newTier);
+        console.log("id: " + req.params.id)
         const membershipData = await Member.update({
-            tier_id: req.body.tier_id,
+            tier_id: req.body.newTier,
         },
             {
                 where: {
@@ -48,6 +50,7 @@ router.put('/:id', async (req, res) => {
                 }
             }
         );
+        res.redirect('/member-dashboard')
         res.status(200).json(membershipData);
     } catch (err) {
         res.status(400).json(err);
